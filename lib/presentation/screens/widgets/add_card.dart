@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task/presentation/widgets/custom_button.dart';
 
 import '../../../utils/constance.dart';
 import '../../../utils/styles.dart';
@@ -21,6 +22,7 @@ class AddCardScreen extends StatelessWidget {
         ),
       ),
       body: ListView(
+        physics: const BouncingScrollPhysics(),
         padding: const EdgeInsets.symmetric(
             horizontal: defaultPadding, vertical: 31.0),
         children: [
@@ -39,6 +41,20 @@ class AddCardScreen extends StatelessWidget {
           const SizedBox(
             height: 12.0,
           ),
+          Row(
+            children: [
+              Expanded(child: CustomTextForm(controller: expireDate, inputType: TextInputType.number, label: "انتهاء الصلاحية", suffixIcon: const Icon(Icons.help_outlined,color: Color(0xFF828282),),),),
+              const SizedBox(width: 12.0,),
+              Expanded(child: CustomTextForm(controller: cnn, inputType: TextInputType.number, label: "رمز الحماية",suffixIcon: const Icon(Icons.help_outlined,color: Color(0xFF828282),),),),
+            ],
+          ),
+          const SizedBox(height: 12.0,),
+          CustomTextForm(controller: name, inputType: TextInputType.name, label: "اسم حامل البطاقة"),
+          const SizedBox(height: 31.0,),
+          const SizedBox(width: double.infinity,child: CustomButton(widget: Text(
+            'حفظ',
+            style: StyleManager.titleStyle14,
+          ), bgColor: Color(0xFF828282),),)
         ],
       ),
     );
@@ -85,12 +101,12 @@ class CustomTextForm extends StatelessWidget {
           validator: (val) {
             return null;
           },
-          keyboardType: TextInputType.number,
+          keyboardType: inputType,
           decoration: InputDecoration(
             border: border,
             focusedBorder: border,
             enabledBorder: border,
-            prefix: prefixIcon,
+            prefixIcon: prefixIcon,
             suffixIcon: suffixIcon,
             contentPadding:
                 const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
