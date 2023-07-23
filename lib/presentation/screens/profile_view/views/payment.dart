@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:task/presentation/widgets/custom_button.dart';
 import 'package:task/presentation/widgets/line.dart';
 import 'package:task/utils/constance.dart';
+import 'package:task/utils/routes.dart';
 import 'package:task/utils/styles.dart';
-
-import '../../../utils/routes.dart';
 
 class PaymentScreen extends StatelessWidget {
   const PaymentScreen({Key? key}) : super(key: key);

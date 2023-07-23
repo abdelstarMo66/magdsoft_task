@@ -33,12 +33,12 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.w500,
             color: const Color(0xFF333333),
           ),
-          iconTheme: IconThemeData(
+          iconTheme: const IconThemeData(
             color: Colors.black,
           )
         )
       ),
-      initialRoute: Routes.profileScreen,
+      initialRoute: Routes.talapatScreen,
       onGenerateRoute: RouterGenerator.onGenerateRoute,
     );
   }

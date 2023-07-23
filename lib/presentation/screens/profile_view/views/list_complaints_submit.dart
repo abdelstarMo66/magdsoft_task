@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../utils/styles.dart';
+import 'package:task/utils/styles.dart';
 
 class ListComplaintsSubmitScreen extends StatelessWidget {
   const ListComplaintsSubmitScreen({Key? key}) : super(key: key);

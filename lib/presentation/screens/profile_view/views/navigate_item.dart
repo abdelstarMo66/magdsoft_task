@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../../../utils/constance.dart';
-import '../../../utils/styles.dart';
+import 'package:task/utils/constance.dart';
+import 'package:task/utils/styles.dart';
 
 class NavigateItem extends StatelessWidget {
   final String text;

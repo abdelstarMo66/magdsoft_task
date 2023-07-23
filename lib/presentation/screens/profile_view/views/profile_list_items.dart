@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:task/presentation/screens/widgets/balance_sheet.dart';
+import 'package:task/utils/routes.dart';
 import 'package:task/utils/styles.dart';
-import '../../../utils/routes.dart';
+import 'balance_sheet.dart';
 import 'profile_item.dart';
 
 class ProfileListItems extends StatelessWidget {

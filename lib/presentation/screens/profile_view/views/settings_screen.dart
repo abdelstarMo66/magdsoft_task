@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:task/presentation/screens/widgets/navigate_item.dart';
+import 'package:task/utils/constance.dart';
 import 'package:task/utils/routes.dart';
-import '../../../utils/constance.dart';
-import '../../../utils/styles.dart';
+import 'package:task/utils/styles.dart';
+import 'navigate_item.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({Key? key}) : super(key: key);

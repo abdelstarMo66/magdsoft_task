@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:task/presentation/widgets/line.dart';
 import 'package:task/utils/constance.dart';
-
-import '../../../utils/styles.dart';
-import '../../widgets/line.dart';
+import 'package:task/utils/styles.dart';
 
 class ProfileItem extends StatelessWidget {
   final String text;

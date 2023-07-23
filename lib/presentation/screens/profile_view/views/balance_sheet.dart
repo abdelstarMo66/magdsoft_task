@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:task/presentation/widgets/custom_button.dart';
+import 'package:task/presentation/widgets/line.dart';
 import 'package:task/utils/constance.dart';
-import '../../../utils/styles.dart';
-import '../../widgets/line.dart';
+import 'package:task/utils/styles.dart';
 
 class BalanceSheet extends StatelessWidget {
   const BalanceSheet({Key? key}) : super(key: key);

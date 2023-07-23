@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:task/presentation/screens/widgets/navigate_item.dart';
-
-import '../../../utils/constance.dart';
-import '../../../utils/routes.dart';
-import '../../../utils/styles.dart';
+import 'package:task/utils/constance.dart';
+import 'package:task/utils/routes.dart';
+import 'package:task/utils/styles.dart';
+import 'navigate_item.dart';
 
 class SupportScreen extends StatelessWidget {
   const SupportScreen({Key? key}) : super(key: key);
@@ -24,7 +23,7 @@ class SupportScreen extends StatelessWidget {
             height: 24.0,
           ),
           Padding(
-            padding: const EdgeInsets.all( defaultPadding),
+            padding: const EdgeInsets.all(defaultPadding),
             child: Text(
               'جميع المواضيع',
               style: StyleManager.titleStyle14
@@ -46,7 +45,7 @@ class SupportScreen extends StatelessWidget {
             onTap: () {},
           ),
           Padding(
-            padding: const EdgeInsets.all( defaultPadding),
+            padding: const EdgeInsets.all(defaultPadding),
             child: Text(
               'بحاجة لمزيد من المساعدة؟',
               style: StyleManager.titleStyle14

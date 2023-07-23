@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../../../utils/constance.dart';
-import '../../../utils/styles.dart';
+import 'package:task/utils/constance.dart';
+import 'package:task/utils/styles.dart';
 
 class Appbar extends StatelessWidget {
   const Appbar({Key? key}) : super(key: key);

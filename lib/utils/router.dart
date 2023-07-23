@@ -1,24 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:task/presentation/screens/profile_view.dart';
-import 'package:task/presentation/screens/widgets/add_card.dart';
-import 'package:task/presentation/screens/widgets/address_saved_screen.dart';
-import 'package:task/presentation/screens/widgets/connect_to_support.dart';
-import 'package:task/presentation/screens/widgets/coupons.dart';
-import 'package:task/presentation/screens/widgets/edit_profile.dart';
-import 'package:task/presentation/screens/widgets/payment.dart';
-import 'package:task/presentation/screens/widgets/settings_screen.dart';
-import 'package:task/presentation/screens/widgets/support_screen.dart';
-import 'package:task/presentation/screens/widgets/terms_of_use.dart';
-import '../presentation/screens/widgets/language_settings.dart';
-import '../presentation/screens/widgets/list_complaints_submit.dart';
-import '../presentation/screens/widgets/more_questions.dart';
-import '../presentation/screens/widgets/privacy_policy.dart';
-import '../presentation/screens/widgets/value_added_tax_certificate.dart';
+import 'package:task/presentation/screens/profile_view/profile_view.dart';
+import 'package:task/presentation/screens/profile_view/views/address_saved_screen.dart';
+import 'package:task/presentation/screens/talapat_view/talapat_view.dart';
+import 'package:task/presentation/screens/talapat_view/views/reorder.dart';
+import '../presentation/screens/profile_view/views/add_card.dart';
+import '../presentation/screens/profile_view/views/connect_to_support.dart';
+import '../presentation/screens/profile_view/views/coupons.dart';
+import '../presentation/screens/profile_view/views/edit_profile.dart';
+import '../presentation/screens/profile_view/views/language_settings.dart';
+import '../presentation/screens/profile_view/views/list_complaints_submit.dart';
+import '../presentation/screens/profile_view/views/more_questions.dart';
+import '../presentation/screens/profile_view/views/payment.dart';
+import '../presentation/screens/profile_view/views/privacy_policy.dart';
+import '../presentation/screens/profile_view/views/settings_screen.dart';
+import '../presentation/screens/profile_view/views/support_screen.dart';
+import '../presentation/screens/profile_view/views/terms_of_use.dart';
+import '../presentation/screens/profile_view/views/value_added_tax_certificate.dart';
+import '../presentation/screens/talapat_view/views/reorder_details.dart';
 import 'routes.dart';
 
 class RouterGenerator {
-  static Route<dynamic> onGenerateRoute(RouteSettings settings) {
+  static Route? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
+      // Profile Router
       case Routes.profileScreen:
         return MaterialPageRoute(builder: (_) => const ProfileScreen());
       case Routes.addressSavedScreen:
@@ -40,38 +44,31 @@ class RouterGenerator {
         return MaterialPageRoute(
             builder: (_) => const ValueAddedTaxCertificateScreen());
       case Routes.privacyPolicyScreen:
-        return MaterialPageRoute(
-            builder: (_) => const PrivacyPolicyScreen());
+        return MaterialPageRoute(builder: (_) => const PrivacyPolicyScreen());
       case Routes.languageSettingsScreen:
         return MaterialPageRoute(
             builder: (_) => const LanguageSettingsScreen());
       case Routes.editProfileScreen:
-        return MaterialPageRoute(
-            builder: (_) => const EditProfileScreen());
+        return MaterialPageRoute(builder: (_) => const EditProfileScreen());
       case Routes.couponsScreen:
-        return MaterialPageRoute(
-            builder: (_) => const CouponsScreen());
+        return MaterialPageRoute(builder: (_) => const CouponsScreen());
       case Routes.paymentScreen:
-        return MaterialPageRoute(
-            builder: (_) => const PaymentScreen());
+        return MaterialPageRoute(builder: (_) => const PaymentScreen());
       case Routes.addCardScreen:
-        return MaterialPageRoute(
-            builder: (_) => const AddCardScreen());
-      default:
-        return unDefinedRoute();
-    }
-  }
+        return MaterialPageRoute(builder: (_) => const AddCardScreen());
 
-  static Route<dynamic> unDefinedRoute() {
-    return MaterialPageRoute(
-      builder: (_) => Scaffold(
-        appBar: AppBar(
-          title: const Text("Not Found Route"),
-        ),
-        body: const Center(
-          child: Text("Not Found Route"),
-        ),
-      ),
-    );
+      ///////////////////////////////////////////////////
+
+      // Talapat Router
+      case Routes.talapatScreen:
+        return MaterialPageRoute(builder: (_) => const TalapatScreen());
+      case Routes.reorderScreen:
+        return MaterialPageRoute(builder: (_) => const ReorderScreen());
+      case Routes.reorderDetailsScreen:
+        return MaterialPageRoute(builder: (_) => const ReorderDetailsScreen());
+
+      default:
+        return null;
+    }
   }
 }

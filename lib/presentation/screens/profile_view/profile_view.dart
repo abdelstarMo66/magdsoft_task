@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:task/presentation/screens/widgets/appbar.dart';
-import 'package:task/presentation/screens/widgets/profile_list_items.dart';
+import 'package:task/presentation/screens/profile_view/views/appbar.dart';
+import 'package:task/presentation/screens/profile_view/views/profile_list_items.dart';
 import 'package:task/utils/constance.dart';
-
-import '../../utils/styles.dart';
-import 'widgets/profile_item.dart';
+import '../../../utils/styles.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -32,7 +29,7 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     Text(
                       'تسجيل الخروج',
-                      style: StyleManager.titleStyle14.copyWith(color: Color(0xFFEB5757)),
+                      style: StyleManager.titleStyle14.copyWith(color: const Color(0xFFEB5757)),
                     )
                   ],
                 ),

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:task/presentation/widgets/custom_button.dart';
+import 'package:task/presentation/widgets/line.dart';
 import 'package:task/utils/constance.dart';
 import 'package:task/utils/styles.dart';
-
-import '../../widgets/line.dart';
 
 class CouponsScreen extends StatelessWidget {
   const CouponsScreen({Key? key}) : super(key: key);
@@ -161,15 +160,15 @@ class CouponsScreen extends StatelessWidget {
                           ),
                           Container(
                             width: double.infinity,
-                            padding: EdgeInsets.symmetric(horizontal: 87.0),
+                            padding: const EdgeInsets.symmetric(horizontal: 87.0),
                             child: CustomButton(
                               widget: Text(
                                 'تحقق',
                                 style: StyleManager.titleStyle12.copyWith(
-                                  color: Color(0xFFFCFDFE),
+                                  color: const Color(0xFFFCFDFE),
                                 ),
                               ),
-                              bgColor: Color(0xFFE60023),
+                              bgColor: const Color(0xFFE60023),
                             ),
                           ),
                           const SizedBox(

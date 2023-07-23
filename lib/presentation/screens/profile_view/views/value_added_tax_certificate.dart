@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../../utils/constance.dart';
-import '../../../utils/styles.dart';
 
 class ValueAddedTaxCertificateScreen extends StatelessWidget {
   const ValueAddedTaxCertificateScreen({Key? key}) : super(key: key);

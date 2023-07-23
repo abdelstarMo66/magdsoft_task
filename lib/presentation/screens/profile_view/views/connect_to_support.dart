@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../../../utils/constance.dart';
-import '../../../utils/styles.dart';
+import 'package:task/utils/constance.dart';
+import 'package:task/utils/styles.dart';
 import 'navigate_item.dart';
 
 class ConnectToSupport extends StatelessWidget {
@@ -23,7 +22,7 @@ class ConnectToSupport extends StatelessWidget {
             height: 24.0,
           ),
           Padding(
-            padding: const EdgeInsets.all( defaultPadding),
+            padding: const EdgeInsets.all(defaultPadding),
             child: Text(
               'المشاكل الشائعة',
               style: StyleManager.titleStyle14
