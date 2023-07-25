@@ -3,6 +3,7 @@ import 'package:task/presentation/widgets/line.dart';
 import 'package:task/utils/constance.dart';
 import 'package:task/utils/styles.dart';
 
+import '../../../../utils/routes.dart';
 import '../../../widgets/custom_button.dart';
 
 class CustomBottomSheet extends StatelessWidget {
@@ -92,15 +93,18 @@ class CustomBottomSheet extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 width: double.infinity,
                 child: CustomButton(
-                  widget: Text(
+                  widget: const Text(
                     'ارسال الطلب',
                     style: StyleManager.titleStyle16,
                   ),
-                  bgColor: Color(0xFFE60023),
+                  bgColor: const Color(0xFFE60023),
                   borderRadius: BorderRadius.zero,
+                  press: (){
+                    Navigator.pushNamed(context, Routes.orderProcessScreen);
+                  },
                 ),
               ),
               const SizedBox(

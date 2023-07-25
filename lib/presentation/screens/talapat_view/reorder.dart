@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:task/presentation/screens/talapat_view/views/reorder_item.dart';
 import 'package:task/utils/constance.dart';
 import 'package:task/utils/styles.dart';
-import '../../../../utils/routes.dart';
-import '../../../widgets/custom_button.dart';
+import '../../widgets/custom_button.dart';
 
 class ReorderScreen extends StatelessWidget {
   const ReorderScreen({Key? key}) : super(key: key);

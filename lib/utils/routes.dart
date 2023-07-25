@@ -22,4 +22,6 @@ class Routes {
   static const String talapatScreen = "/talapatScreen";
   static const String reorderScreen = "/reorderScreen";
   static const String reorderDetailsScreen = "/reorderDetailsScreen";
+  static const String newOrderScreen = "/newOrderScreen";
+  static const String orderProcessScreen = "/orderProcessScreen";
 }

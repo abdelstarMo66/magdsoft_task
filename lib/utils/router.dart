@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:task/presentation/screens/profile_view/profile_view.dart';
 import 'package:task/presentation/screens/profile_view/views/address_saved_screen.dart';
+import 'package:task/presentation/screens/talapat_view/new_order.dart';
 import 'package:task/presentation/screens/talapat_view/talapat_view.dart';
-import 'package:task/presentation/screens/talapat_view/views/reorder.dart';
+import 'package:task/presentation/screens/talapat_view/reorder.dart';
 import '../presentation/screens/profile_view/views/add_card.dart';
 import '../presentation/screens/profile_view/views/connect_to_support.dart';
 import '../presentation/screens/profile_view/views/coupons.dart';
@@ -16,7 +17,8 @@ import '../presentation/screens/profile_view/views/settings_screen.dart';
 import '../presentation/screens/profile_view/views/support_screen.dart';
 import '../presentation/screens/profile_view/views/terms_of_use.dart';
 import '../presentation/screens/profile_view/views/value_added_tax_certificate.dart';
-import '../presentation/screens/talapat_view/views/reorder_details.dart';
+import '../presentation/screens/talapat_view/order_process.dart';
+import '../presentation/screens/talapat_view/reorder_details.dart';
 import 'routes.dart';
 
 class RouterGenerator {
@@ -66,6 +68,10 @@ class RouterGenerator {
         return MaterialPageRoute(builder: (_) => const ReorderScreen());
       case Routes.reorderDetailsScreen:
         return MaterialPageRoute(builder: (_) => const ReorderDetailsScreen());
+      case Routes.newOrderScreen:
+        return MaterialPageRoute(builder: (_) => const NewOrder());
+      case Routes.orderProcessScreen:
+        return MaterialPageRoute(builder: (_) => const OrderProcessScreen());
 
       default:
         return null;
