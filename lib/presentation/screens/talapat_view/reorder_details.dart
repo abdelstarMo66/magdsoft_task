@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:task/controller/talapat_cubit/talapat_cubit.dart';
 import 'package:task/presentation/screens/talapat_view/views/order_address.dart';
 import 'package:task/presentation/screens/talapat_view/views/order_coupons.dart';
 import 'package:task/presentation/screens/talapat_view/views/order_details.dart';
@@ -13,32 +15,36 @@ class ReorderDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Column(
-          children: [
-            Text(
-              'اعادة طلب',
-              style: StyleManager.titleStyle10.copyWith(
-                fontWeight: FontWeight.w500,
-                color: const Color(0xFFBDBDBD),
+    return BlocProvider(
+      create: (context) => GlobalTalapatCubit(),
+      child: Scaffold(
+        appBar: AppBar(
+          title: Column(
+            children: [
+              Text(
+                'اعادة طلب',
+                style: StyleManager.titleStyle10.copyWith(
+                  fontWeight: FontWeight.w500,
+                  color: const Color(0xFFBDBDBD),
+                ),
               ),
-            ),
-            const Text('جان برجر'),
+              const Text('جان برجر'),
+            ],
+          ),
+          elevation: 0.0,
+        ),
+        bottomSheet: const CustomBottomSheet(),
+        body: ListView(
+          physics: const BouncingScrollPhysics(),
+          padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+          children: const [
+            OrderDetails(),
+            OrderAddress(),
+            OrderPayment(),
+            OrderCoupons(),
+            SizedBox(height: 250.0,),
           ],
         ),
-        elevation: 0.0,
-      ),
-      bottomSheet: const CustomBottomSheet(),
-      body: ListView(
-        padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
-        children: const [
-          OrderDetails(),
-          OrderAddress(),
-          OrderPayment(),
-          OrderCoupons(),
-          SizedBox(height: 250.0,),
-        ],
       ),
     );
   }

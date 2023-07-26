@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
           )
         )
       ),
-      initialRoute: Routes.newOrderScreen,
+      initialRoute: Routes.talapatScreen,
       onGenerateRoute: RouterGenerator.onGenerateRoute,
     );
   }

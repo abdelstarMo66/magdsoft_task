@@ -13,8 +13,9 @@ class ProfileListItems extends StatelessWidget {
       children: [
         InkWell(
           onTap: () {
-            Scaffold.of(context).showBottomSheet(
-              (context) => const BalanceSheet(),
+            showModalBottomSheet(
+              context: context,
+              builder: (context) => const BalanceSheet(),
               elevation: 10.0,
             );
           },
@@ -86,7 +87,7 @@ class ProfileListItems extends StatelessWidget {
           ),
         ),
         InkWell(
-          onTap: (){
+          onTap: () {
             Navigator.pushNamed(context, Routes.addressSavedScreen);
           },
           child: ProfileItem(
@@ -115,7 +116,7 @@ class ProfileListItems extends StatelessWidget {
           ),
         ),
         InkWell(
-          onTap: (){
+          onTap: () {
             Navigator.pushNamed(context, Routes.couponsScreen);
           },
           child: ProfileItem(
@@ -150,7 +151,7 @@ class ProfileListItems extends StatelessWidget {
           ),
         ),
         InkWell(
-          onTap: (){
+          onTap: () {
             Navigator.pushNamed(context, Routes.supportScreen);
           },
           child: const ProfileItem(
@@ -166,7 +167,7 @@ class ProfileListItems extends StatelessWidget {
           ),
         ),
         InkWell(
-          onTap: (){
+          onTap: () {
             Navigator.pushNamed(context, Routes.settingsScreen);
           },
           child: const ProfileItem(
@@ -182,7 +183,7 @@ class ProfileListItems extends StatelessWidget {
           ),
         ),
         InkWell(
-          onTap: (){
+          onTap: () {
             Navigator.pushNamed(context, Routes.paymentScreen);
           },
           child: const ProfileItem(

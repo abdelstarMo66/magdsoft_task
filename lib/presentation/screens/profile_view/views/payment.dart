@@ -44,8 +44,9 @@ class PaymentScreen extends StatelessWidget {
             VisaItem(
                 number: "2017****",
                 onTap: () {
-                  scaffoldKey.currentState?.showBottomSheet(
-                    (context) => Column(
+                  showModalBottomSheet(
+                    context: context,
+                    builder: (context) => Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisSize: MainAxisSize.min,
                       children: [
@@ -77,7 +78,7 @@ class PaymentScreen extends StatelessWidget {
                         ),
                         const Line(),
                         InkWell(
-                          onTap:(){},
+                          onTap: () {},
                           child: Padding(
                             padding: const EdgeInsets.symmetric(
                               horizontal: defaultPadding,
@@ -103,7 +104,9 @@ class PaymentScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 49.0,),
+                        const SizedBox(
+                          height: 49.0,
+                        ),
                       ],
                     ),
                   );
@@ -135,7 +138,7 @@ class PaymentScreen extends StatelessWidget {
                   ],
                 ),
                 bgColor: const Color(0xFFE60023),
-                press: (){
+                press: () {
                   Navigator.pushNamed(context, Routes.addCardScreen);
                 },
               ),

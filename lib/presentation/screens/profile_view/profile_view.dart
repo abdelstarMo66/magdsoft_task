@@ -18,7 +18,7 @@ class ProfileScreen extends StatelessWidget {
             const Appbar(),
             const ProfileListItems(),
             InkWell(
-              onTap: (){},
+              onTap: () {},
               child: Padding(
                 padding: const EdgeInsets.all(defaultPadding),
                 child: Row(
@@ -29,7 +29,8 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     Text(
                       'تسجيل الخروج',
-                      style: StyleManager.titleStyle14.copyWith(color: const Color(0xFFEB5757)),
+                      style: StyleManager.titleStyle14
+                          .copyWith(color: const Color(0xFFEB5757)),
                     )
                   ],
                 ),
