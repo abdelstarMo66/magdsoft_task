@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:task/presentation/screens/auth_view/register_form_screen1.dart';
+import 'package:task/presentation/screens/auth_view/register_form_screen2.dart';
+import 'package:task/presentation/screens/auth_view/register_form_screen3.dart';
+import 'package:task/presentation/screens/auth_view/register_form_screen4.dart';
+import 'package:task/presentation/screens/auth_view/register_form_screen5.dart';
 import 'package:task/presentation/screens/profile_view/profile_view.dart';
 import 'package:task/presentation/screens/profile_view/views/address_saved_screen.dart';
 import 'package:task/presentation/screens/talapat_view/new_order.dart';
@@ -72,6 +77,18 @@ class RouterGenerator {
         return MaterialPageRoute(builder: (_) => const NewOrder());
       case Routes.orderProcessScreen:
         return MaterialPageRoute(builder: (_) => const OrderProcessScreen());
+
+      // Auth Router
+      case Routes.registerFormScreen1:
+        return MaterialPageRoute(builder: (_) => const RegisterFormScreen1());
+      case Routes.registerFormScreen2:
+        return MaterialPageRoute(builder: (_) => const RegisterFormScreen2());
+      case Routes.registerFormScreen3:
+        return MaterialPageRoute(builder: (_) => const RegisterFormScreen3());
+      case Routes.registerFormScreen4:
+        return MaterialPageRoute(builder: (_) => const RegisterFormScreen4());
+      case Routes.registerFormScreen5:
+        return MaterialPageRoute(builder: (_) => const RegisterFormScreen5());
 
       default:
         return null;
