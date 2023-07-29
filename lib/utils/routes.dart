@@ -24,6 +24,9 @@ class Routes {
   static const String reorderDetailsScreen = "/reorderDetailsScreen";
   static const String newOrderScreen = "/newOrderScreen";
   static const String orderProcessScreen = "/orderProcessScreen";
+  static const String rateScreen = "/rateScreen";
+  static const String rateDetailsScreen = "/rateDetailsScreen";
+  static const String thanksView = "/thanksView";
 
   // Auth Routes
   static const String registerFormScreen1 = "/registerFormScreen1";

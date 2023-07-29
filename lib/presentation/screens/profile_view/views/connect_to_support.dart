@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task/utils/constance.dart';
 import 'package:task/utils/styles.dart';
-import 'navigate_item.dart';
+import '../../../../../presentation/screens/profile_view/views/navigate_item.dart';
 
 class ConnectToSupport extends StatelessWidget {
   const ConnectToSupport({Key? key}) : super(key: key);

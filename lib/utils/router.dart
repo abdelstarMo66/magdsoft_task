@@ -7,8 +7,11 @@ import 'package:task/presentation/screens/auth_view/register_form_screen5.dart';
 import 'package:task/presentation/screens/profile_view/profile_view.dart';
 import 'package:task/presentation/screens/profile_view/views/address_saved_screen.dart';
 import 'package:task/presentation/screens/talapat_view/new_order.dart';
+import 'package:task/presentation/screens/talapat_view/rate_details.dart';
 import 'package:task/presentation/screens/talapat_view/talapat_view.dart';
 import 'package:task/presentation/screens/talapat_view/reorder.dart';
+import 'package:task/presentation/screens/talapat_view/rate_screen.dart';
+import 'package:task/presentation/screens/talapat_view/views/thanksView.dart';
 import '../presentation/screens/profile_view/views/add_card.dart';
 import '../presentation/screens/profile_view/views/connect_to_support.dart';
 import '../presentation/screens/profile_view/views/coupons.dart';
@@ -77,6 +80,12 @@ class RouterGenerator {
         return MaterialPageRoute(builder: (_) => const NewOrder());
       case Routes.orderProcessScreen:
         return MaterialPageRoute(builder: (_) => const OrderProcessScreen());
+      case Routes.rateScreen:
+        return MaterialPageRoute(builder: (_) => const RateScreen());
+      case Routes.rateDetailsScreen:
+        return MaterialPageRoute(builder: (_) => const RateDetailsScreen());
+      case Routes.thanksView:
+        return MaterialPageRoute(builder: (_) => const ThanksView());
 
       // Auth Router
       case Routes.registerFormScreen1:

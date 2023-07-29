@@ -37,7 +37,7 @@ class OrderProcessScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => GlobalTalapatCubit()..changeTimer(),
+      create: (context) => GlobalTalapatCubit()..changeTimer(context),
       child: Scaffold(
         appBar: AppBar(
           title: Column(

@@ -1,12 +1,9 @@
-import 'package:country_picker/country_picker.dart';
-import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
+import 'package:task/presentation/widgets/customFormItem.dart';
 import 'package:task/presentation/widgets/custom_button.dart';
 import 'package:task/utils/constance.dart';
 import 'package:task/utils/routes.dart';
 import 'package:task/utils/styles.dart';
-
-import '../../widgets/customFormItem.dart';
 
 class RegisterFormScreen3 extends StatelessWidget {
   const RegisterFormScreen3({Key? key}) : super(key: key);

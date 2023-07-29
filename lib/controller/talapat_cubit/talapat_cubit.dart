@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:task/model/talapat_item_model.dart';
+import 'package:task/utils/routes.dart';
 part 'talapat_state.dart';
 
 class GlobalTalapatCubit extends Cubit<GlobalTalapatStates> {
@@ -24,13 +25,19 @@ class GlobalTalapatCubit extends Cubit<GlobalTalapatStates> {
   late Timer timer;
   int index = 0;
 
-  changeTimer() {
+  changeTimer(context) {
     timer = Timer.periodic(const Duration(seconds: 3), (_) {
       if (index < 4) {
         index++;
         emit(ChangeOrderProcessState());
       }
     });
+    Future.delayed(
+      const Duration(seconds: 35),
+      () {
+        Navigator.pushNamed(context, Routes.rateScreen);
+      },
+    );
   }
 
   void changeRowItems(index) {
