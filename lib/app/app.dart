@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
           )
         )
       ),
-      initialRoute: Routes.rateScreen,
+      initialRoute: Routes.driverProfileScreen,
       onGenerateRoute: RouterGenerator.onGenerateRoute,
     );
   }

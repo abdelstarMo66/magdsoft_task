@@ -4,6 +4,9 @@ import 'package:task/presentation/screens/auth_view/register_form_screen2.dart';
 import 'package:task/presentation/screens/auth_view/register_form_screen3.dart';
 import 'package:task/presentation/screens/auth_view/register_form_screen4.dart';
 import 'package:task/presentation/screens/auth_view/register_form_screen5.dart';
+import 'package:task/presentation/screens/driver_profile_view/driver_profile_view.dart';
+import 'package:task/presentation/screens/driver_profile_view/views/driver_rate.dart';
+import 'package:task/presentation/screens/driver_profile_view/views/driver_support_screen.dart';
 import 'package:task/presentation/screens/profile_view/profile_view.dart';
 import 'package:task/presentation/screens/profile_view/views/address_saved_screen.dart';
 import 'package:task/presentation/screens/talapat_view/new_order.dart';
@@ -12,6 +15,8 @@ import 'package:task/presentation/screens/talapat_view/talapat_view.dart';
 import 'package:task/presentation/screens/talapat_view/reorder.dart';
 import 'package:task/presentation/screens/talapat_view/rate_screen.dart';
 import 'package:task/presentation/screens/talapat_view/views/thanksView.dart';
+import '../presentation/screens/driver_profile_view/views/driver_order_request.dart';
+import '../presentation/screens/driver_profile_view/views/driver_profits.dart';
 import '../presentation/screens/profile_view/views/add_card.dart';
 import '../presentation/screens/profile_view/views/connect_to_support.dart';
 import '../presentation/screens/profile_view/views/coupons.dart';
@@ -98,6 +103,18 @@ class RouterGenerator {
         return MaterialPageRoute(builder: (_) => const RegisterFormScreen4());
       case Routes.registerFormScreen5:
         return MaterialPageRoute(builder: (_) => const RegisterFormScreen5());
+
+      // Driver Profile Router
+      case Routes.driverProfileScreen:
+        return MaterialPageRoute(builder: (_) => const DriverProfileScreen());
+      case Routes.driverRateScreen:
+        return MaterialPageRoute(builder: (_) => const DriverRateScreen());
+      case Routes.driverSupportScreen:
+        return MaterialPageRoute(builder: (_) => const DriverSupportScreen());
+      case Routes.driverProfitsScreen:
+        return MaterialPageRoute(builder: (_) => const DriverProfitsScreen());
+      case Routes.driverOrderRequestScreen:
+        return MaterialPageRoute(builder: (_) => const DriverOrderRequest());
 
       default:
         return null;
